@@ -11,7 +11,7 @@ public class BoeingAircraftCreationFactory implements AircraftCreationAbstractFa
         Plane plane = null;
         List<Plane> boeingPlaneList = new ArrayList<>();
         if (boeingPlanName.equalsIgnoreCase("Boeing 737")) {
-            for (int i = 0; i <quantity; i++) {
+            for (int i = 0; i < quantity; i++) {
                 plane = new Boeing737Plane();
                 boeingPlaneList.add(plane);
             }

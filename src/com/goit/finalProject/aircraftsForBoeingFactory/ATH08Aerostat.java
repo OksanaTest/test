@@ -2,7 +2,10 @@ package com.goit.finalProject.aircraftsForBoeingFactory;
 
 import com.goit.finalProject.Aerostat;
 import com.goit.finalProject.parser.InitialValuesParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Map;
 
 public class ATH08Aerostat implements Aerostat {
@@ -14,7 +17,9 @@ public class ATH08Aerostat implements Aerostat {
     private static Integer WeightLift;
     private static Integer GasCylinderVolume;
     private static Integer FlightAltitudes;
-
+/*
+fields initialization with values from .json file with initial parameters for aerostat 08 ATH
+ */
     static {
 
         try {
@@ -46,10 +51,21 @@ public class ATH08Aerostat implements Aerostat {
                     WeightLift = Integer.parseInt(entry.getValue().toString());
                 }
             }
-        } catch (Exception e) {
-            System.err.println("[ERROR]:");
-        }
-    }
+        }catch (NullPointerException e){
+            System.err.println("[ERROR]: SOME INITIAL VALUES FOR 08 ATH CAN NOT BE READ FROM FILE");
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            for(StackTraceElement element: stackTraceElements){
+                System.err.println(element);}
+        }catch (ClassCastException e) {System.err.println("[ERROR]:WRONG InitialValues FILE STRUCTURE");
+        }catch (ParseException e){ System.err.println("[ERROR]: ERROR IN THE InitialValues file FOR 08 ATH");
+        }catch (IOException e){
+            System.out.println("[ERROR]: IO Exception IS OCCUR");
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            for(StackTraceElement element: stackTraceElements){
+                System.err.println(element);}
+        }catch (Exception e){
+            System.out.println("GENERAL ERROR");}
+}
     public String getAircraftType(){
         return AircraftType;
     };

@@ -2,7 +2,9 @@ package com.goit.finalProject.aircraftsForSikorskyFactory;
 
 import com.goit.finalProject.Helicopter;
 import com.goit.finalProject.parser.InitialValuesParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.Map;
 
 public class SikorskyR_6 implements Helicopter{
@@ -14,7 +16,9 @@ public class SikorskyR_6 implements Helicopter{
     private static Integer FlyingRange;
     private static Integer SeatingCapacity;
     private static Integer WeightLift;
-
+/*
+//fields initialization with values from .json file with initial parameters for Sikorsky R - 6
+ */
     static {
 
         try {
@@ -46,9 +50,20 @@ public class SikorskyR_6 implements Helicopter{
                     WeightLift = Integer.parseInt(entry.getValue().toString());
                 }
             }
-        } catch (Exception e) {
-            System.err.println("[ERROR]:");
-        }
+        } catch (NullPointerException e){
+            System.err.println("[ERROR]: SOME INITIAL VALUES FOR Sikorsky R - 6 CAN NOT BE READ FROM FILE");
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            for(StackTraceElement element: stackTraceElements){
+                System.err.println(element);}
+        } catch (ClassCastException e) {System.err.println("[ERROR]:WRONG InitialValues FILE STRUCTURE");
+        }catch (ParseException e){ System.err.println("[ERROR]: ERROR IN THE InitialValues file FOR SIKORSKY R - 6");
+        }catch (IOException e){
+            System.out.println("[ERROR]: IO Exception IS OCCUR");
+            StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+            for(StackTraceElement element: stackTraceElements){
+                System.err.println(element);}
+        }catch (Exception e){
+            System.out.println("GENERAL ERROR");}
     }
     public String getAircraftName(){
         return AircraftName;

@@ -6,7 +6,7 @@ import com.goit.lessons.homeWork.modules09.StringsEncrypt;
 import java.io.*;
 
 public class FileCreation {
-        public static void main(String[] args) throws Exception{
+        public static void main(String[] args) throws FileNotFoundException,IOException{
             CaesarMain caesarMain = new CaesarMain();
             StringsEncrypt stringsEncrypt = new StringsEncrypt(2, 7);
             StringsDecrypt stringsDecrypt = new StringsDecrypt(2, 7);
@@ -14,7 +14,7 @@ public class FileCreation {
             String[] array = caesarMain.FillList();
 
             try{
-                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tmp.txt")));
+                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("t///mp.txt")));
                 for (int i = 0; i < array.length; i++) {
                     String toWrite = array[i];
                     out.println(toWrite);
@@ -30,7 +30,10 @@ public class FileCreation {
                     out.println(toWrite);
                 }
                 out.close();
-            }catch (IOException e){
+            }catch (FileNotFoundException e){
+                System.err.println("[ERROR]: FILE TO WRITE INFORMATION CAN NOT BE CREATED");
+            }
+            catch (IOException e){
                 e.printStackTrace();
                 System.err.println("[ERROR]: Unfortunately IOException is occurred :( ");
             }
