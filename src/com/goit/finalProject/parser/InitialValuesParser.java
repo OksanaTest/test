@@ -20,7 +20,7 @@ public class InitialValuesParser {
     public Map<String, Object> boeing777InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
 
         JSONParser initialValuesParser = new JSONParser();
-        Object object = initialValuesParser.parse(new FileReader("Wrodkfjdf////.tisodg//"));
+        Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
 
         Map<String, Object> planesValues = new HashMap<>();
