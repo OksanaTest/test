@@ -17,7 +17,7 @@ Class methods returns Maps with initials aircraft parameters (from JSON file) to
 and SikorskyAircraftCreationFactory classes
  */
 public class InitialValuesParser {
-    public Map<String, Object> boeing777InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+    public Map<String, Object> boeing777InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
 
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
@@ -48,7 +48,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> boeing737InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> boeing737InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -79,7 +80,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> boeingBell47InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> boeingBell47InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -110,7 +112,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> boeingBellAHCobraInitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> boeingBellAHCobraInitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -141,7 +144,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> boeingATC07AerostatInitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> boeingATC07AerostatInitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -172,7 +176,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> boeingATH08AerostatInitialValues() throws NullPointerException,IOException, ParseException, ClassCastException{
+
+    public Map<String, Object> boeingATH08AerostatInitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -203,7 +208,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> sikorskyS44PlaneInitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> sikorskyS44PlaneInitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -234,7 +240,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> sikorskyS52PlaneInitialValues()throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> sikorskyS52PlaneInitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -265,7 +272,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> sikorskyR6InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> sikorskyR6InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;
@@ -296,7 +304,8 @@ public class InitialValuesParser {
         }
         return planesValues;
     }
-    public Map<String, Object> sikorskySH3InitialValues() throws NullPointerException,IOException, ParseException, ClassCastException {
+
+    public Map<String, Object> sikorskySH3InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
         JSONParser initialValuesParser = new JSONParser();
         Object object = initialValuesParser.parse(new FileReader("InitialValues"));
         JSONArray jsonArray = (JSONArray) object;

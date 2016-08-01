@@ -1,4 +1,4 @@
-package com.goit.finalProject;
+package com.goit.finalProject.exceptions;
 
 public class NegativeQuantityException extends RuntimeException{
     public NegativeQuantityException()

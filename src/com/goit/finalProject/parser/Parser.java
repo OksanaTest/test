@@ -1,7 +1,8 @@
 package com.goit.finalProject.parser;
 
 
-import com.goit.finalProject.NegativeQuantityException;
+import com.goit.finalProject.exceptions.NegativeQuantityException;
+import com.goit.finalProject.exceptions.UnexpectedVendorNameException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -26,6 +27,9 @@ public class Parser {
             JSONObject jsonObject = (JSONObject) aJsonArray;
             String name = (String) jsonObject.get("vendorName");
             JSONArray order = (JSONArray) jsonObject.get("order");
+            if ((!name.equalsIgnoreCase("Boeing"))&&(!name.equalsIgnoreCase("Sikorsky"))){
+                throw new UnexpectedVendorNameException();
+            }
             if (name.equalsIgnoreCase("Boeing")) {
                 for (Object anOrder : order) {
                     JSONObject jsonObject1 = (JSONObject) anOrder;
