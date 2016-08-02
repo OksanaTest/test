@@ -18,35 +18,34 @@ and SikorskyAircraftCreationFactory classes
  */
 public class InitialValuesParser {
     public Map<String, Object> boeing777InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {
+            JSONParser initialValuesParser = new JSONParser();
+            Object object = initialValuesParser.parse(new FileReader("InitialValues"));
+            JSONArray jsonArray = (JSONArray) object;
 
-        JSONParser initialValuesParser = new JSONParser();
-        Object object = initialValuesParser.parse(new FileReader("InitialValues"));
-        JSONArray jsonArray = (JSONArray) object;
+            Map<String, Object> planesValues = new HashMap<>();
+                for (Object aJsonArray : jsonArray) {
+                    JSONObject jsonObject = (JSONObject) aJsonArray;
+                    String name = (String) jsonObject.get("vendorName");
+                    JSONArray planes = (JSONArray) jsonObject.get("planes");
+                    if (name.equalsIgnoreCase("Boeing")) {
+                        for (Object plane : planes) {
+                            JSONObject jsonObject1 = (JSONObject) plane;
+                            if (((String) jsonObject1.get("planeName")).equalsIgnoreCase("Boeing 777")) {
+                                planesValues.put("vendorName", name);
+                                planesValues.put("aircraftType", "Plane");
+                                planesValues.put("planeName", jsonObject1.get("planeName"));
+                                planesValues.put("planeType", jsonObject1.get("planeType").toString());
+                                planesValues.put("flyingRange", jsonObject1.get("flyingRange").toString());
+                                planesValues.put("seatingCapacity", jsonObject1.get("seatingCapacity").toString());
+                                planesValues.put("fuelEndurance", jsonObject1.get("fuelEndurance").toString());
+                                planesValues.put("weightLift", jsonObject1.get("weightLift"));
 
-        Map<String, Object> planesValues = new HashMap<>();
-        for (Object aJsonArray : jsonArray) {
-            JSONObject jsonObject = (JSONObject) aJsonArray;
-            String name = (String) jsonObject.get("vendorName");
-
-            JSONArray planes = (JSONArray) jsonObject.get("planes");
-            if (name.equalsIgnoreCase("Boeing")) {
-                for (Object plane : planes) {
-                    JSONObject jsonObject1 = (JSONObject) plane;
-                    if (((String) jsonObject1.get("planeName")).equalsIgnoreCase("Boeing 777")) {
-                        planesValues.put("vendorName", name);
-                        planesValues.put("aircraftType", "Plane");
-                        planesValues.put("planeName", jsonObject1.get("planeName"));
-                        planesValues.put("planeType", jsonObject1.get("planeType").toString());
-                        planesValues.put("flyingRange", jsonObject1.get("flyingRange").toString());
-                        planesValues.put("seatingCapacity", jsonObject1.get("seatingCapacity").toString());
-                        planesValues.put("fuelEndurance", jsonObject1.get("fuelEndurance").toString());
-                        planesValues.put("weightLift", jsonObject1.get("weightLift"));
-
+                            }
+                        }
                     }
+
                 }
-            }
-        }
-        return planesValues;
+            return planesValues;
     }
 
     public Map<String, Object> boeing737InitialValues() throws NullPointerException, IOException, ParseException, ClassCastException {

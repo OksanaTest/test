@@ -34,7 +34,7 @@ public class Parser {
                 for (Object anOrder : order) {
                     JSONObject jsonObject1 = (JSONObject) anOrder;
                     if ((Long) jsonObject1.get("quantity") <= 0 ) throw new NegativeQuantityException();
-                    if (((String) jsonObject1.get("aircraftType")).equalsIgnoreCase("Helicopter")) {
+                    if (((String) jsonObject1.get("aircraftType")).equalsIgnoreCase("Plane")) {
                         boeingHelicopterOrder.put((String) jsonObject1.get("aircraftName"),
                                 (Long) jsonObject1.get("quantity"));
                     }
