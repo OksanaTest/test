@@ -6,7 +6,7 @@
     "flyingRange": 10111,
     "seatingCapacity": 550,
     "fuelEndurance": 700,
-    "weightLift": 1212111
+    "weightLift": 12000
   },
     {
       "planeName": "Boeing 737",
@@ -14,13 +14,13 @@
       "flyingRange": 5080,
       "seatingCapacity": 471,
       "fuelEndurance": 393,
-      "weightLift": 15003
+      "weightLift": 15000
     }
   ],
   "helicopters":[{
     "helicopterName": "Bell 47",
-    "weightLift": 2323,
-    "fuelEndurance": 5748,
+    "weightLift": 3000,
+    "fuelEndurance": 250,
     "seatingCapacity": 1111,
     "lengthMorphingHelicopterRotor": 25,
     "flyingRange": 35463
@@ -36,7 +36,7 @@
     ],
      "aerostats": [{
       "aerostatName": "07 ATC",
-      "weightLift": 23211,
+      "weightLift": 2500,
       "fuelEndurance": 5728,
       "seatingCapacity": 1888,
       "gasCylinderVolume": 101,
@@ -59,7 +59,7 @@
     "flyingRange": 20991,
     "seatingCapacity": 530,
     "fuelEndurance": 800,
-    "weightLift": 188111
+    "weightLift": 500
   },
     {
       "planeName": "Sikorsky S - 52",
@@ -72,7 +72,7 @@
   ],
   "helicopters":[{
     "helicopterName": "Sikorsky R - 6",
-    "weightLift": 2993,
+    "weightLift": 3000,
     "fuelEndurance": 748,
     "seatingCapacity": 101,
     "lengthMorphingHelicopterRotor": 21,
