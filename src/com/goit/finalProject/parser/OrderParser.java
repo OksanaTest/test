@@ -17,7 +17,7 @@ import java.util.Map;
 Class methods returns Map with aircraft name, count and type (from JSON file) to produce
 such aircraft
 */
-public class Parser {
+public class OrderParser {
     public Map<String, Long> boeingPlanOrderPrepare() throws NullPointerException,IOException, ParseException, ClassCastException {
             JSONParser parser = new JSONParser();
             Object object = parser.parse(new FileReader("AirCraftOrder.json"));

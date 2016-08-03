@@ -1,6 +1,6 @@
 package com.goit.finalProject;
 
-import com.goit.finalProject.parser.Parser;
+import com.goit.finalProject.parser.OrderParser;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class Fleet {
     public  List<Plane> createAllBoeingPlanOrder() throws Exception{
         boeingAircraftCreationFactory = new BoeingAircraftCreationFactory();
         List<Plane> planeList = new ArrayList<>();
-        Parser parserAgain = new Parser();
+        OrderParser parserAgain = new OrderParser();
 
         for (Object o : parserAgain.boeingPlanOrderPrepare().entrySet()) {
             Map.Entry entry = (Map.Entry) o;
@@ -20,7 +20,7 @@ public class Fleet {
         return planeList;
     }
     public  List<Helicopter> createAllBoeingHelicopterOrder() throws Exception{
-        Parser parserAgain = new Parser();
+        OrderParser parserAgain = new OrderParser();
         boeingAircraftCreationFactory = new BoeingAircraftCreationFactory();
         List<Helicopter> helicopterList = new ArrayList<>();
 
@@ -32,7 +32,7 @@ public class Fleet {
         return helicopterList;
     }
     public  List<Aerostat> createAllBoeingAerostat() throws Exception{
-        Parser parserAgain = new Parser();
+        OrderParser parserAgain = new OrderParser();
         boeingAircraftCreationFactory = new BoeingAircraftCreationFactory();
         List<Aerostat> aerostatList = new ArrayList<>();
 
@@ -44,7 +44,7 @@ public class Fleet {
         return aerostatList;
     }
     public  List<Plane> createAllSikorskyPlanOrder() throws Exception{
-        Parser parserAgain = new Parser();
+        OrderParser parserAgain = new OrderParser();
         sikorskyAircraftCreationFactory =
                 new SikorskyAircraftCreationFactory();
         List<Plane> planeList = new ArrayList<>();
@@ -57,7 +57,7 @@ public class Fleet {
         return planeList;
     }
     public  List<Helicopter> createAllSikorskyHelicopterOrder() throws Exception{
-        Parser parserAgain = new Parser();
+        OrderParser parserAgain = new OrderParser();
         sikorskyAircraftCreationFactory = new SikorskyAircraftCreationFactory();
         List<Helicopter> helicopterList= new ArrayList<>();
 
