@@ -17,7 +17,7 @@ public class LinkedListDemo {
         ll.addFirst("M");
         System.out.println("LinkedList after addFist M " + ll);
 
-        ll.add(2, "test");
+        ll.add(2, "testTEST");
         System.out.println("LinkedList after add element with index 2 " + ll);
 
         System.out.println(ll.remove(5) + " will be removed ");

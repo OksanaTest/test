@@ -7,7 +7,7 @@ import java.util.*;
 public class Fleet {
     private BoeingAircraftCreationFactory boeingAircraftCreationFactory;
     private SikorskyAircraftCreationFactory sikorskyAircraftCreationFactory;
-    public  List<Plane>  createAllBoeingPlanOrder() throws Exception{
+    public  List<Plane> createAllBoeingPlanOrder() throws Exception{
         boeingAircraftCreationFactory = new BoeingAircraftCreationFactory();
         List<Plane> planeList = new ArrayList<>();
         Parser parserAgain = new Parser();
@@ -111,7 +111,7 @@ public class Fleet {
     public  Integer summaryWeightLift() throws Exception{
         int summaryWeightLift = 0;
         for (int i = 0; i < commonFleet().size(); i++){
-            summaryWeightLift += commonFleet().get(i).getWeightLift();
+            summaryWeightLift = commonFleet().get(i).getWeightLift();
         }
         return summaryWeightLift;
     }
