@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ArrayListUsage {
     public static void main(String[] args) {
         ArrayList<String> al = new ArrayList<>();
-        System.out.println("initial ArrayList size is = " + al.size());
+        System.out.println("initial ActionsWithArrayList size is = " + al.size());
 
         al.add("C");
         al.add("A");
@@ -21,6 +21,6 @@ public class ArrayListUsage {
         System.out.println(al);
         System.out.println();
         System.out.println("This List element will be deleted - " + al.remove(2));
-        System.out.println("ArrayList after remove(2)" + al);
+        System.out.println("ActionsWithArrayList after remove(2)" + al);
     }
 }

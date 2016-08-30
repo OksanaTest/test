@@ -17,7 +17,7 @@ public class ArrayListToArray {
         al.add(4);
         al.add(5);
 
-        System.out.println("ArrayList is " + al);
+        System.out.println("ActionsWithArrayList is " + al);
 
         Integer array[] = new Integer[al.size()];
         array = al.toArray(array);//array with int elements

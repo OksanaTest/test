@@ -24,7 +24,7 @@ public class FindPairsCollection implements AutoCloseable {
 
         }
         if (counter == 0){
-            System.out.println("ArrayList does not contain a couple of elements which sum is  " + target);
+            System.out.println("ActionsWithArrayList does not contain a couple of elements which sum is  " + target);
         }
 
     }
@@ -33,13 +33,13 @@ public class FindPairsCollection implements AutoCloseable {
 
         ArrayList<Integer> arrayList= new ArrayList<>();
 
-// Fill ArrayList in cycle
+// Fill ActionsWithArrayList in cycle
         /*for(int i = 0; i < 30; i++){
             arrayList.add(i);
             System.out.print(arrayList.get(i) + " ");
         }*/
 
-//Fill ArrayList
+//Fill ActionsWithArrayList
         arrayList.add(5);
         arrayList.add(1);
         arrayList.add(3);
@@ -62,9 +62,9 @@ public class FindPairsCollection implements AutoCloseable {
                 FindPairsCollection findPairsCollection = new FindPairsCollection())
         {findPairsCollection.findPairs(findPairsCollection.arrayFill(), 5);
         } catch (NullPointerException e){
-            System.err.println("[ERROR]: Some element in the ArrayList is null");
+            System.err.println("[ERROR]: Some element in the ActionsWithArrayList is null");
         } catch (ArrayListSizeException e){
-            System.err.println("[ERROR]: ArrayList's size is 0 or 1");
+            System.err.println("[ERROR]: ActionsWithArrayList's size is 0 or 1");
         }
     }
 }

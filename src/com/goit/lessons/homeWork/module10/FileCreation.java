@@ -14,7 +14,7 @@ public class FileCreation {
             String[] array = caesarMain.FillList();
 
             try{
-                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("t///mp.txt")));
+                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tmp.txt")));
                 for (int i = 0; i < array.length; i++) {
                     String toWrite = array[i];
                     out.println(toWrite);
