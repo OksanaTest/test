@@ -63,7 +63,7 @@ public class AddMethodImplementation implements AddMethod{
          out.close();
         return list;
     }
-    private Collection<Double> addMethodsForSet(Collection<Double> collection) throws Exception{
+    private Set<Double> addMethodsForSet(Set<Double> set) throws Exception{
         long end,start,time = 0 ;
         double i,j = 0;
         PrintWriter out = new PrintWriter(new BufferedWriter(
@@ -71,16 +71,16 @@ public class AddMethodImplementation implements AddMethod{
         while(j <= 100) {
             i = (Math.random() * 2000);
             start = System.nanoTime();
-            collection.add(i);
+            set.add(i);
             end = System.nanoTime();
             time += (end - start);
             j++;
         }
-        Object toWrite = "\n" + "Add (value) method for " + collection.getClass().getSimpleName() +
+        Object toWrite = "\n" + "Add (value) method for " + set.getClass().getSimpleName() +
                 " time " + time/100 + ", collection size is ";
         out.print(toWrite);
         out.close();
-        return collection;
+        return set;
     }
 
 }
