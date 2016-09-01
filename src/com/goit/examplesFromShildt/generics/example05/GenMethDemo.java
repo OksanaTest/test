@@ -1,6 +1,7 @@
 package com.goit.examplesFromShildt.generics.example05;
-
-import com.goit.examplesFromShildt.generics.example03.Stats;
+/*
+p. 414
+ */
 
 public class GenMethDemo {
     //определить, содержится ли лбъект в массиве
