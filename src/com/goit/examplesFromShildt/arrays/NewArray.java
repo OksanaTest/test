@@ -16,7 +16,7 @@ public class NewArray {
                     System.out.print(threeD[i][j][k] + " ");
                 System.out.println();
             }
-            System.out.println();
+            System.out.println(threeD.length);
         }
         System.out.println();
     }
